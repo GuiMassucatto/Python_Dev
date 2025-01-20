@@ -62,4 +62,5 @@ def main(pagina):
     pagina.add(titulo)
     pagina.add(botao)
 
+# Configurando a porta com base na variável de ambiente
 ft.app(target=main, view=ft.WEB_BROWSER, port=int(os.environ.get("PORT", 80)))
