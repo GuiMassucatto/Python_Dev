@@ -1,3 +1,4 @@
+import os
 import flet as ft
 
 def main(pagina):
@@ -61,6 +62,5 @@ def main(pagina):
     pagina.add(titulo)
     pagina.add(botao)
 
-ft.app(target=main, view=ft.WEB_BROWSER)
-
-
+    port = int(os.getenv("PORT", 8080))
+    ft.app(target=main, view=ft.WEB_BROWSER, port=port)
